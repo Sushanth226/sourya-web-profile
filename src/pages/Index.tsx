@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Github, Linkedin, Mail, Phone, ExternalLink, Code, GraduationCap, Award, User, Briefcase } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import ContactForm from '@/components/ContactForm';
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -262,10 +262,17 @@ const Index = () => {
           <div className="text-center mb-12">
             <Mail className="mx-auto mb-4 h-12 w-12 text-primary" />
             <h2 className="text-3xl font-bold text-foreground mb-4">Get In Touch</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
               I'm always open to discussing new opportunities, projects, or just having a chat about technology.
             </p>
           </div>
+          
+          {/* Contact Form */}
+          <div className="mb-12">
+            <ContactForm />
+          </div>
+          
+          {/* Contact Information */}
           <div className="max-w-2xl mx-auto">
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <Card>
