@@ -10,6 +10,7 @@ const AboutSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            entry.target.classList.remove('opacity-0');
             entry.target.classList.add('animate-fade-up');
           }
         });
@@ -26,7 +27,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 px-6" ref={sectionRef}>
       <div className="container mx-auto">
-        <div className="text-center mb-12 observe-animate opacity-0">
+        <div className="text-center mb-12 observe-animate opacity-0 transition-all duration-700">
           <User className="mx-auto mb-4 h-12 w-12 text-primary animate-pulse" />
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">About Me</span>
@@ -37,7 +38,7 @@ const AboutSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Card className="glass hover-lift p-8 observe-animate opacity-0">
+          <Card className="glass hover-lift p-8 observe-animate opacity-0 transition-all duration-700">
             <p className="text-lg leading-relaxed text-foreground mb-6">
               I am a dedicated <strong className="text-primary">Computer Science Engineering student</strong> with 
               a passion for solving complex problems through innovative software solutions. My journey in technology 
