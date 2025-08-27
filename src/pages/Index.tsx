@@ -163,6 +163,9 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* ElevenLabs Assistant Widget */}
+      <elevenlabs-convai agent-id="agent_0601k3ntj0zkezbtp8jg3319nyws"></elevenlabs-convai>
     </div>
   );
 };
