@@ -9,7 +9,7 @@ const InternshipSection = () => {
         <div className="text-center mb-12">
           <Building2 className="mx-auto mb-4 h-12 w-12 text-primary animate-pulse" />
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-gradient">Experience</span>
+            <span className="text-gradient">Internship</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Professional experience in AI and automation
