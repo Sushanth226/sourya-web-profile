@@ -32,20 +32,20 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-3xl font-medium text-foreground animate-fade-up stagger-1">
-            Computer Science Engineer | AI & Blockchain Enthusiast
+            Full Stack Developer | AI Automation Enthusiast | Competitive Programmer
           </p>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto animate-fade-up stagger-2">
-            <em>"Exploring AI, Blockchain, and Software Engineering with Creativity and Innovation."</em>
+            <em>Computer Science undergraduate specializing in MERN stack development and AI-driven automation using n8n and Gemini API.</em>
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 pt-8 animate-fade-up stagger-3">
             <Button 
               size="lg" 
               className="hover-lift neon-glow"
-              onClick={() => scrollToSection('about')}
+              onClick={() => scrollToSection('projects')}
             >
-              Explore My Journey
+              View Projects
             </Button>
             <Button 
               size="lg" 

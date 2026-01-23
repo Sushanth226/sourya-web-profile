@@ -8,9 +8,9 @@ import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import InternshipSection from '@/components/InternshipSection';
+import AchievementsSection from '@/components/AchievementsSection';
 import CertificatesSection from '@/components/CertificatesSection';
 import CodingProfiles from '@/components/CodingProfiles';
-import ExtracurricularSection from '@/components/ExtracurricularSection';
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -26,7 +26,7 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold text-gradient">SSS</h1>
             <div className="hidden md:flex space-x-6">
-              {['about', 'skills', 'projects', 'internship', 'certifications', 'contact'].map((item) => (
+              {['about', 'skills', 'projects', 'experience', 'achievements', 'certifications', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -57,14 +57,14 @@ const Index = () => {
       {/* Projects Section */}
       <ProjectsSection />
 
-      {/* Internship Section */}
+      {/* Experience Section */}
       <InternshipSection />
+
+      {/* Achievements Section */}
+      <AchievementsSection />
 
       {/* Certificates Section */}
       <CertificatesSection />
-
-      {/* Extracurricular Activities */}
-      <ExtracurricularSection />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gradient-to-b from-muted/20 to-background">
@@ -158,7 +158,7 @@ const Index = () => {
           </div>
           <div className="text-center pt-8 border-t border-border/50">
             <p className="text-muted-foreground">
-              © 2024 Sushanth Sourya Suru. All rights reserved.
+              © 2025 Sushanth Sourya Suru. All rights reserved.
             </p>
           </div>
         </div>
