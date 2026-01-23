@@ -1,39 +1,76 @@
 import React from 'react';
-import { Award, CheckCircle } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Award, Cloud, Code, Brain } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const CertificatesSection = () => {
-  const certificates = [
-    { title: 'Basics in Python', issuer: 'Infosys Springboard', description: 'Introductory Python concepts and problem solving' },
-    { title: 'Problem Solving using C', issuer: 'BYTS India', description: 'Strengthened algorithmic thinking with C programming' },
-    { title: 'C Programming', issuer: 'Infosys Springboard', description: 'Hands-on foundational C coding' },
-    { title: 'HTML5: The Language', issuer: 'Infosys Springboard', description: 'Core concepts of web structure and HTML elements' },
-    { title: 'Programming in Java', issuer: 'NPTEL', description: 'Object-oriented programming and Java best practices' },
-    { title: 'Networking Essentials', issuer: 'Cisco Networking Academy', description: 'Networking fundamentals, protocols, and security' },
-    { title: 'Blockchain Basics', issuer: 'Cyfrin Updraft', description: 'Fundamentals of blockchain technology and smart contracts' }
+  const certCategories = [
+    {
+      title: 'Cloud & Infrastructure',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500',
+      certs: [
+        { title: 'AWS Cloud Quest', issuer: 'Cloud Practitioner' },
+        { title: 'Cisco Networking Essentials', issuer: 'Cisco Networking Academy' }
+      ]
+    },
+    {
+      title: 'Programming',
+      icon: Code,
+      color: 'from-green-500 to-emerald-500',
+      certs: [
+        { title: 'Programming in Java', issuer: 'NPTEL – Elite' },
+        { title: 'Python & C Programming', issuer: 'Infosys Springboard' }
+      ]
+    },
+    {
+      title: 'AI & Emerging Tech',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      certs: [
+        { title: 'AI Fundamentals', issuer: 'NPTEL – Top 5%' },
+        { title: 'Blockchain Basics', issuer: 'Cyfrin Updraft' }
+      ]
+    }
   ];
 
   return (
-    <section id="certifications" className="py-20 px-6">
+    <section id="certifications" className="py-20 px-6 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <Award className="mx-auto mb-4 h-12 w-12 text-primary animate-pulse" />
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-gradient">Certifications</span>
           </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Professional certifications across multiple domains
+          </p>
         </div>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-4">
-          {certificates.map((cert, index) => (
-            <Card key={index} className="glass hover-lift animate-zoom-in" style={{ animationDelay: `${index * 0.1}s` }}>
-              <CardContent className="pt-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-bold text-foreground">{cert.title}</h3>
-                    <p className="text-sm text-accent font-medium">{cert.issuer}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{cert.description}</p>
+
+        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+          {certCategories.map((category, index) => (
+            <Card 
+              key={index} 
+              className="glass hover-lift animate-zoom-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardHeader className="pb-3">
+                <CardTitle className="flex items-center gap-2 text-lg">
+                  <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
+                    <category.icon className="w-4 h-4 text-white" />
                   </div>
-                </div>
+                  {category.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                {category.certs.map((cert, idx) => (
+                  <div 
+                    key={idx} 
+                    className="p-3 rounded-lg bg-gradient-to-r from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 transition-all"
+                  >
+                    <h4 className="font-semibold text-sm text-foreground">{cert.title}</h4>
+                    <p className="text-xs text-muted-foreground">{cert.issuer}</p>
+                  </div>
+                ))}
               </CardContent>
             </Card>
           ))}

@@ -6,28 +6,25 @@ import { Button } from '@/components/ui/button';
 const ProjectsSection = () => {
   const projects = [
     {
-      title: 'Railway Management System',
-      description: 'A comprehensive train management system featuring ticketing, employee hiring, and cancellation functionalities. Built with Java Swing for the GUI and MySQL for database management.',
-      techStack: ['Java', 'MySQL', 'JDBC', 'Swing'],
-      github: 'https://github.com/Sushanth226/Railway-Management-System-JAVA-PROJECT',
+      title: 'Inventory Management System',
+      description: 'A full stack web application for managing inventory records through a responsive interface.',
+      techStack: ['React', 'Node.js', 'Express', 'MongoDB'],
+      github: 'https://github.com/Sushanth226/inventory-management-system-mern',
       highlights: [
-        'Train management and scheduling',
-        'Employee hiring system',
-        'Ticket booking and cancellation',
-        'GUI design with Java Swing',
-        'Backend connectivity with JDBC'
+        'Managed 100+ inventory records with full CRUD operations',
+        'Built secure RESTful APIs',
+        'Optimized MongoDB queries achieving sub-20 ms response time'
       ]
     },
     {
-      title: 'AI-Powered Feedback Automation',
-      description: 'Designed a no-code AI workflow to automate customer feedback processing. Generated sentiment-tagged summaries and filtered irrelevant responses.',
-      techStack: ['n8n', 'Gemini API', 'Google Sheets', 'AI Workflow'],
+      title: 'AI-Driven Feedback Automation',
+      description: 'An AI-powered automation system for real-time feedback classification and analysis.',
+      techStack: ['n8n', 'Gemini API', 'Lovable AI'],
+      github: 'https://github.com/Sushanth226/cozy-web-spark',
       highlights: [
-        'Sentiment analysis automation',
-        'Customer feedback processing',
-        'No-code AI workflow design',
-        'Adaptable across industries (cafés, e-commerce, hospitality)',
-        'AI integration and workflow automation'
+        'Automated processing of 50+ feedback entries per execution',
+        'Implemented AI-based classification with 80% accuracy',
+        'Reduced manual analysis effort by ~70%'
       ]
     }
   ];
@@ -41,7 +38,7 @@ const ProjectsSection = () => {
             <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Showcasing expertise in software development, AI, and automation
+            Showcasing expertise in full stack development and AI automation
           </p>
         </div>
 
@@ -85,7 +82,7 @@ const ProjectsSection = () => {
                   {project.description}
                 </p>
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-sm text-foreground">Key Features:</h4>
+                  <h4 className="font-semibold text-sm text-foreground">Key Highlights:</h4>
                   <ul className="space-y-1">
                     {project.highlights.map((highlight, idx) => (
                       <li key={idx} className="text-sm text-muted-foreground flex items-start gap-2">
