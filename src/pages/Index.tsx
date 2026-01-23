@@ -11,6 +11,7 @@ import InternshipSection from '@/components/InternshipSection';
 import AchievementsSection from '@/components/AchievementsSection';
 import CertificatesSection from '@/components/CertificatesSection';
 import CodingProfiles from '@/components/CodingProfiles';
+import ExtracurricularSection from '@/components/ExtracurricularSection';
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -65,6 +66,9 @@ const Index = () => {
 
       {/* Certificates Section */}
       <CertificatesSection />
+
+      {/* Extracurricular Activities */}
+      <ExtracurricularSection />
 
       {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gradient-to-b from-muted/20 to-background">
