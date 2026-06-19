@@ -1,5 +1,5 @@
 import React from 'react';
-import { Trophy, Medal, Target } from 'lucide-react';
+import { Trophy, Medal } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 
 const AchievementsSection = () => {
@@ -17,14 +17,8 @@ const AchievementsSection = () => {
       description: 'National Coding Competition',
       icon: Medal,
       color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Smart India Hackathon',
-      subtitle: 'Participant',
-      description: '2024, 2025 Editions',
-      icon: Target,
-      color: 'from-green-500 to-emerald-500'
     }
+
   ];
 
   return (
@@ -40,7 +34,7 @@ const AchievementsSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+        <div className="max-w-3xl mx-auto grid md:grid-cols-2 gap-6">
           {achievements.map((achievement, index) => (
             <Card 
               key={index} 
