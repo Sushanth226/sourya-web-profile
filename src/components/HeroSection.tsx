@@ -22,7 +22,7 @@ const HeroSection = () => {
         <div className="text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass animate-fade-in">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-muted-foreground">Pre-final Year B.Tech CSE • Open to Internships</span>
+            <span className="text-sm font-medium text-muted-foreground">Final Year B.Tech CSE • 2027 Graduate • Open to Internships</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold animate-fade-up">
