@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Database, Brain, BookOpen, Globe, Cloud } from 'lucide-react';
+import { Code, Database, Brain, BookOpen, Globe, Cloud, Server } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const SkillsSection = () => {
@@ -7,14 +7,26 @@ const SkillsSection = () => {
     {
       title: 'Languages',
       icon: Code,
-      skills: ['Java', 'Python', 'C', 'JavaScript (ES6+)', 'SQL', 'Solidity (Basic)'],
+      skills: ['Java', 'Python', 'C', 'JavaScript', 'SQL', 'Solidity'],
       color: 'from-orange-500 to-red-500'
     },
     {
-      title: 'Web & Backend',
+      title: 'Frontend',
       icon: Globe,
-      skills: ['React.js', 'Node.js', 'Express.js', 'HTML5', 'CSS3', 'REST APIs'],
+      skills: ['React.js', 'HTML5', 'CSS3', 'Vite'],
       color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Backend',
+      icon: Server,
+      skills: ['Node.js', 'Express.js', 'REST APIs'],
+      color: 'from-indigo-500 to-violet-500'
+    },
+    {
+      title: 'AI & LLM',
+      icon: Brain,
+      skills: ['Gemini API', 'Groq API', 'LangChain', 'OpenAI API', 'RAG Pipelines', 'Multi-Agent Orchestration', 'n8n', 'Zod'],
+      color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Databases',
@@ -23,21 +35,15 @@ const SkillsSection = () => {
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'AI & Automation',
-      icon: Brain,
-      skills: ['n8n', 'Gemini API', 'Lovable AI'],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Cloud & Tools',
+      title: 'Tools',
       icon: Cloud,
-      skills: ['AWS Cloud Practitioner', 'Git', 'GitHub', 'Postman', 'VS Code'],
+      skills: ['Git', 'GitHub', 'Postman', 'VS Code', 'AWS Cloud Practitioner'],
       color: 'from-yellow-500 to-orange-500'
     },
     {
       title: 'Core CS',
       icon: BookOpen,
-      skills: ['Data Structures', 'Algorithms', 'OOP', 'Operating Systems', 'DBMS'],
+      skills: ['DSA', 'OOP', 'DBMS', 'Operating Systems', 'System Design'],
       color: 'from-cyan-500 to-blue-500'
     }
   ];
@@ -51,14 +57,14 @@ const SkillsSection = () => {
             <span className="text-gradient">Technical Skills</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Skills applied in real projects and internships
+            Skills applied across full-stack, agentic AI, and competitive programming
           </p>
         </div>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => (
-            <Card 
-              key={category.title} 
+            <Card
+              key={category.title}
               className="glass hover-lift animate-zoom-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -73,8 +79,8 @@ const SkillsSection = () => {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {category.skills.map((skill) => (
-                    <span 
-                      key={skill} 
+                    <span
+                      key={skill}
                       className="px-3 py-1.5 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full text-sm font-medium hover:from-primary/20 hover:to-accent/20 transition-all cursor-default"
                     >
                       {skill}

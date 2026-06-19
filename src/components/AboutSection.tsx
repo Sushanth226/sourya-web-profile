@@ -56,7 +56,7 @@ const AboutSection = () => {
                 <div className="space-y-4">
                   <div className="p-4 rounded-lg bg-gradient-to-r from-primary/5 to-accent/5 border border-primary/20">
                     <h4 className="font-bold text-lg text-primary">B-Tech, Computer Science Engineering</h4>
-                    <p className="text-muted-foreground">Prasad V. Potluri Siddhartha Institute of Technology (2023–Present)</p>
+                    <p className="text-muted-foreground">Prasad V. Potluri Siddhartha Institute of Technology (2023–2027)</p>
                     <p className="text-foreground mt-2">
                       Currently maintaining a strong <span className="font-bold text-accent">CGPA of 8.57</span>, 
                       reflecting consistent academic excellence and dedication to learning.
