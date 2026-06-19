@@ -39,7 +39,7 @@ const HeroSection = () => {
 
           <div className="flex flex-wrap justify-center gap-4 pt-8 animate-fade-up stagger-3">
             <Button size="lg" className="hover-lift neon-glow" asChild>
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1alGDO8FDcouLYxHxUtjxHMRSIt7jZipz/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-4 w-4" />
                 Resume
               </a>
