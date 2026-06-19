@@ -7,10 +7,9 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import SkillsSection from '@/components/SkillsSection';
 import ProjectsSection from '@/components/ProjectsSection';
-import InternshipSection from '@/components/InternshipSection';
+import CompetitiveProgrammingSection from '@/components/CompetitiveProgrammingSection';
 import AchievementsSection from '@/components/AchievementsSection';
 import CertificatesSection from '@/components/CertificatesSection';
-import CodingProfiles from '@/components/CodingProfiles';
 import ExtracurricularSection from '@/components/ExtracurricularSection';
 
 const Index = () => {
@@ -21,13 +20,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Navigation */}
       <nav className="fixed top-0 w-full glass z-50 border-b border-border/50">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-xl font-bold text-gradient">SSS</h1>
             <div className="hidden md:flex space-x-6">
-              {['about', 'skills', 'projects', 'experience', 'achievements', 'certifications', 'contact'].map((item) => (
+              {['about', 'skills', 'projects', 'competitive', 'achievements', 'certifications', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -41,36 +39,15 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <HeroSection />
-
-      {/* About Section */}
       <AboutSection />
-
-      {/* Skills Section */}
       <SkillsSection />
-      
-      {/* Coding Profiles */}
-      <div className="container mx-auto px-6">
-        <CodingProfiles />
-      </div>
-
-      {/* Projects Section */}
       <ProjectsSection />
-
-      {/* Experience Section */}
-      <InternshipSection />
-
-      {/* Achievements Section */}
+      <CompetitiveProgrammingSection />
       <AchievementsSection />
-
-      {/* Certificates Section */}
       <CertificatesSection />
-
-      {/* Extracurricular Activities */}
       <ExtracurricularSection />
 
-      {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-gradient-to-b from-muted/20 to-background">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -82,41 +59,33 @@ const Index = () => {
               Let's connect and explore opportunities together
             </p>
           </div>
-          
+
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            {/* Contact Form */}
             <div className="animate-slide-in-left">
               <ContactForm />
             </div>
-            
-            {/* Contact Information */}
+
             <div className="space-y-6 animate-slide-in-right">
               <Card className="glass hover-lift neon-glow">
                 <CardContent className="pt-6 text-center">
                   <Phone className="mx-auto mb-3 h-8 w-8 text-primary" />
                   <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                  <a 
-                    href="tel:+919491317744" 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <a href="tel:+919491317744" className="text-muted-foreground hover:text-primary transition-colors">
                     +91 9491317744
                   </a>
                 </CardContent>
               </Card>
-              
+
               <Card className="glass hover-lift neon-glow">
                 <CardContent className="pt-6 text-center">
                   <Mail className="mx-auto mb-3 h-8 w-8 text-primary" />
                   <h3 className="font-semibold text-lg mb-2">Email</h3>
-                  <a 
-                    href="mailto:surusourya@gmail.com" 
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
+                  <a href="mailto:surusourya@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                     surusourya@gmail.com
                   </a>
                 </CardContent>
               </Card>
-              
+
               <div className="flex gap-4 justify-center">
                 <Button size="lg" className="hover-lift pulse-glow" asChild>
                   <a href="https://github.com/Sushanth226" target="_blank" rel="noopener noreferrer">
@@ -136,7 +105,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-12 px-6 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-8">
@@ -168,7 +136,6 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* ElevenLabs Assistant Widget */}
       <elevenlabs-convai agent-id="agent_0601k3ntj0zkezbtp8jg3319nyws"></elevenlabs-convai>
     </div>
   );

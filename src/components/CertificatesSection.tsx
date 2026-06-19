@@ -1,15 +1,23 @@
 import React from 'react';
-import { Award, Cloud, Code, Brain } from 'lucide-react';
+import { Award, Cloud, Code, Brain, Network } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const CertificatesSection = () => {
   const certCategories = [
     {
-      title: 'Cloud & Infrastructure',
+      title: 'Cloud',
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       certs: [
-        { title: 'AWS Cloud Quest', issuer: 'Cloud Practitioner' },
+        { title: 'AWS Cloud Practitioner', issuer: 'Amazon Web Services' },
+        { title: 'AWS Cloud Quest', issuer: 'Amazon Web Services' }
+      ]
+    },
+    {
+      title: 'Networking',
+      icon: Network,
+      color: 'from-teal-500 to-emerald-500',
+      certs: [
         { title: 'Cisco Networking Essentials', issuer: 'Cisco Networking Academy' }
       ]
     },
@@ -18,16 +26,18 @@ const CertificatesSection = () => {
       icon: Code,
       color: 'from-green-500 to-emerald-500',
       certs: [
-        { title: 'Programming in Java', issuer: 'NPTEL – Elite' },
-        { title: 'Python & C Programming', issuer: 'Infosys Springboard' }
+        { title: 'NPTEL Programming in Java – Elite', issuer: 'NPTEL' },
+        { title: 'Python Certification', issuer: 'Infosys Springboard' },
+        { title: 'C Programming Certification', issuer: 'Infosys Springboard' },
+        { title: 'Frontend Web Development', issuer: 'Online Coursework' }
       ]
     },
     {
-      title: 'AI & Emerging Tech',
+      title: 'Emerging Tech',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       certs: [
-        { title: 'AI Fundamentals', issuer: 'NPTEL – Top 5%' },
+        { title: 'AI Fundamentals (Top 5%)', issuer: 'NPTEL' },
         { title: 'Blockchain Basics', issuer: 'Cyfrin Updraft' }
       ]
     }
@@ -42,17 +52,13 @@ const CertificatesSection = () => {
             <span className="text-gradient">Certifications</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Professional certifications across multiple domains
+            Professional certifications across cloud, programming and emerging tech
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {certCategories.map((category, index) => (
-            <Card 
-              key={index} 
-              className="glass hover-lift animate-zoom-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+            <Card key={index} className="glass hover-lift animate-zoom-in" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardHeader className="pb-3">
                 <CardTitle className="flex items-center gap-2 text-lg">
                   <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
@@ -63,10 +69,7 @@ const CertificatesSection = () => {
               </CardHeader>
               <CardContent className="space-y-3">
                 {category.certs.map((cert, idx) => (
-                  <div 
-                    key={idx} 
-                    className="p-3 rounded-lg bg-gradient-to-r from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 transition-all"
-                  >
+                  <div key={idx} className="p-3 rounded-lg bg-gradient-to-r from-primary/5 to-accent/5 hover:from-primary/10 hover:to-accent/10 transition-all">
                     <h4 className="font-semibold text-sm text-foreground">{cert.title}</h4>
                     <p className="text-xs text-muted-foreground">{cert.issuer}</p>
                   </div>
